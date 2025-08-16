@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/grid.css">
+
+    <title>Frontend Mentor | Social Media Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Social Media Dashboard</h1>
+            <span>Total Followers: 23,004</span>
+        </div>
+        <div class="light-dark">
+            <span>Dark Mode</span>
+            <button id="switch-mode" aria-label="Toggle dark mode" aria-pressed="false"></button>
+        </div>
+    </header>
+    <main class="main">
+        <section aria-label="Social Media Summary">
+            <article class="social-card facebook">
+                <span class="contact"><img src="images/icon-facebook.svg" alt="Icon Facebook">@nathanf</span> 
+                <span class="number">1987</span> <span class="follower">Followers</span> 
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up"> 12 Today</span>
+            </article>
+            <article class="social-card twitter">
+                <span class="contact"><img src="images/icon-twitter.svg" alt="Icon Twitter">@nathanf</span> 
+                <span class="number">1044</span> <span class="follower">Followers</span> 
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">99 Today</span>
+            </article>
+            <article class="social-card instagram">
+                <span class="contact"><img src="images/icon-instagram.svg" alt="Icon Instagram">@realnathanf</span> 
+                <span class="number">11k</span> <span class="follower">Followers</span>
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">1099 Today</span>
+            </article>
+            <article class="social-card youtube">
+                <span class="contact"><img src="images/icon-youtube.svg" alt="Icon YouTube">Nathan F.</span>
+                <span class="number">8239</span> <span class="follower">Subscribers</span> 
+                <span class="stats-down"><img src="images/icon-down.svg" alt="down">144 Today</span>
+            </article>
+        </section>
+
+        <section aria-label="Today's detailed metrics">
+            <h2 class="subtitle">Overview - Today</h2>
+            
+            <article class="social-card-review">
+                Page Views <span class="number">87</span> 
+                <img src="images/icon-facebook.svg" alt="Facebook Icon"> 
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">3%</span>
+            </article>
+            <article class="social-card-review">
+                Likes <span class="number">52</span> 
+                <img src="images/icon-facebook.svg" alt="Facebook Icon" class="social-icon">
+                <span class="stats-down"><img src="images/icon-down.svg" alt="down">2%</span>
+            </article>
+            <article class="social-card-review">
+                Likes <span class="number">5462</span>
+                <img src="images/icon-instagram.svg" alt="Icon Instagram"> 
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">2257%</span>
+            </article>
+            <article class="social-card-review">
+                Profile Views <span class="number">52k</span> 
+                <img src="images/icon-instagram.svg" alt="Icon Instagram">
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">1375%</span>
+            </article>
+            <article class="social-card-review">
+                Retweets <span class="number">117</span> 
+                <img src="images/icon-twitter.svg" alt="Icon Twitter">
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">303%</span>
+            </article>
+            <article class="social-card-review">
+                Likes <span class="number">507</span> 
+                <img src="images/icon-twitter.svg" alt="Icon Twitter">
+                <span class="stats-up"><img src="images/icon-up.svg" alt="up">553%</span>
+            </article>
+            <article class="social-card-review">
+                Likes <span class="number">107</span> 
+                <img src="images/icon-youtube.svg" alt="Icon YouTube">
+                <span class="stats-down"><img src="images/icon-down.svg" alt="down">19%</span>
+            </article>
+            <article class="social-card-review">
+                Total Views <span class="number">1407</span>
+                <img src="images/icon-youtube.svg" alt="Icon YouTube"> 
+                <span class="stats-down"><img src="images/icon-down.svg" alt="down">12</span>
+            </article>
+        </section>
+    </main>
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded with ❤ by <a href="https://github.com/JesusAlarconDev">Jesús Alarcón Maldonado</a>.
+    </footer>
+    <script src="scripts/code.js"></script>
+</body>
+
+</html>

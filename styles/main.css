@@ -1,0 +1,310 @@
+:root {
+    --very-dark-blue-top-bg-pattern: hsl(232, 19%, 15%);
+    --dark-desaturated-blue: hsl(228, 28%, 20%);
+    --desaturated-blue: hsl(228, 34%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --light-grayish-blue: hsl(227, 47%, 96%);
+    --dark-grayish-blue: hsl(228, 12%, 44%);
+    --very-dark-blue: hsl(230, 17%, 14%);
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --youtube: hsl(348, 97%, 39%);
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+}
+
+/* Fuentes| Fonts */
+
+@font-face {
+    font-family: "inter";
+    src: url("../fonts/Inter-Regular-slnt=0.ttf");
+}
+
+@font-face {
+    font-family: "inter";
+    font-weight: bold;
+    src: url("../fonts/Inter-Bold-slnt=0.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "inter";
+    background: var(--white);
+    color: var(--dark-grayish-blue);
+    transition: .3s ease all;
+}
+
+header {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 10% 200px 10%;
+    background: var(--very-pale-blue);
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: var(--very-dark-blue);
+}
+
+.light-dark {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-around;
+}
+
+
+/* Estilos boton de switch| Button Switch Styles */
+
+#switch-mode {
+    width: 60px;
+    height: 30px;
+    background: hsl(230, 22%, 74%);
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+#switch-mode::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transition: .3s ease all;
+    left: 30px;
+}
+
+#switch-mode:active,
+#switch-mode:focus {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+#switch-mode.actived {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+#switch-mode.actived::before {
+    left: 0px;
+    background: hsl(232, 19%, 15%);
+}
+
+
+/*Estilos Tarjetas de redes sociales Principales | Social Main Cards Styles*/
+
+.social-card {
+    background: var(--light-grayish-blue);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease;
+}
+
+.social-card .number {
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--very-dark-blue);
+}
+
+.social-card .contact {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.social-card .contact img {
+    margin-right: 5px;
+}
+
+.social-card .follower {
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.facebook::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: var(--facebook);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.twitter::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: var(--twitter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.instagram::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.youtube::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: var(--youtube);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+span.stats-up {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--lime-green);
+}
+
+span.stats-up img,
+span.stats-down img {
+    margin-right: 5px;
+}
+
+span.stats-down {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--bright-red);
+}
+
+h2 {
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+
+/*Estilos informacion de redes sociales*/
+
+.social-card-review {
+    background: var(--light-grayish-blue);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: space-between;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.social-card-review .number {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--very-dark-blue);
+}
+
+.social-card-review .stats-up,
+.social-card-review .stats-down {
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.social-card-review>img {
+    width: 20px;
+    height: 20px;
+    justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.social-card:hover,
+.social-card-review:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-card:active,
+.social-card:active {
+    background-color: hsl(225, 11%, 86%);
+}
+
+
+/*Estilos Modo Oscuro | Dark mode styles*/
+
+body.dark {
+    background: var(--very-dark-blue);
+    color: var(--desaturated-blue);
+}
+
+body.dark header {
+    background: var(--very-dark-blue-top-bg-pattern);
+    color: var(--white);
+}
+
+body.dark header h1 {
+    color: var(--white);
+}
+
+body.dark .title span {
+    color: var(--desaturated-blue);
+}
+
+body.dark .social-card,
+body.dark .social-card-review {
+    background: var(--dark-desaturated-blue);
+}
+
+body.dark .social-card .number,
+body.dark .social-card-review .number,
+body.dark h2 {
+    color: var(--white);
+}
+
+body.dark .social-card-review {
+    background: var(--dark-desaturated-blue);
+}
+
+body.dark .social-card-review:active,
+body.dark .social-card:active {
+    background-color: hsl(229, 21%, 25%);
+}
+
+/* Estilos para el attribution | Attribution styles */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

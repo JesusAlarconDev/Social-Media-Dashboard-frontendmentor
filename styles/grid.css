@@ -1,0 +1,72 @@
+.main {
+    display: grid;
+    width: 80%;
+    margin: -140px auto 100px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 130px);
+    grid-gap: 20px;
+    grid-template-areas: "facebook twitter instagram youtube" "facebook twitter instagram youtube" "overview overview overview overview";
+}
+
+/* Permite que los sections se vuelvan invisibles al Main y 
+pueda hacer una sola Grid para las cards, manteniendo
+la estructura semántica del HTML */
+
+section[aria-label="Social Media Summary"],
+section[aria-label="Today's detailed metrics"] {
+    display: contents;
+}
+
+.subtitle {
+    grid-area: overview;
+}
+
+.facebook {
+    grid-area: facebook;
+}
+
+.twitter {
+    grid-area: twitter;
+}
+
+.instagram {
+    grid-area: instagram;
+}
+
+.youtube {
+    grid-area: youtube;
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 110px;
+    }
+    .light-dark {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid hsl(228, 12%, 44%);
+        width: 100%;
+        justify-content: space-between;
+    }
+    body.dark .light-dark {
+        border-top: 1px solid hsl(228, 34%, 66%);
+    }
+    .main {
+        margin-top: -50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 130px);
+        grid-template-areas: "facebook twitter""facebook twitter""instagram youtube""instagram youtube""overview overview";
+    }
+}
+
+@media screen and (max-width: 730px) {
+    h1 {
+        font-size: 23px;
+    }
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(17, 130px);
+        grid-template-areas: "facebook" "facebook" "twitter" "twitter" "instagram" "instagram" "youtube" "youtube" "overview";
+    }
+}
