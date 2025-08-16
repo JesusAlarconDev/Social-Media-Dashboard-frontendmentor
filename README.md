@@ -2,6 +2,11 @@
 
 Un proyecto de FrontendMentor de maquetación e implementación de temas, basado en un Dashboard interactivo de redes sociales. Incluye persistencia del tema usando LocalStorage. 
 
+## 🌐 Demo en Vivo
+
+**¡Prueba la aplicación aquí!** 👉 [Ver Demo](https://social-media-dashboard-frontendment.vercel.app/)
+
+
 ## 🚀 Características
 
 - **Tema adaptable**: Switch entre modo claro y oscuro con persistencia en localStorage
